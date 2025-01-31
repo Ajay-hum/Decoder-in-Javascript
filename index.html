@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encoder & Decoder</title>
 </head>
-<body>
+<body class="layout">
     <div class="start">
-        <h1 class="header">ENCODER AND DECODER</h1>
+        <h1 class="header">EncodeDecode</h1>
         <form class="space" onsubmit="return false;">
             <div class="cont">
                 <label for="message" class="indi">Message:</label>
@@ -26,8 +26,8 @@
                         <button type="button" class="decodebutton" onclick="processMessage('decode')">Decode</button>
                     </div>
                 </div>
-                <label for="result" class="indi" style="margin-top: 2rem">Output:</label>
-                <output id="result" class="area"></output>
+                <label for="result" class="output">Output:</label>
+                <output id="result" rows="5" class="area" required></output>
             </div>
         </form>
     </div>
