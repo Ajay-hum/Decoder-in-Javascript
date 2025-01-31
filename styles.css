@@ -1,0 +1,66 @@
+.start{
+    padding: 2rem;
+    width: 100%;
+    max-width: 3xl;
+}
+
+.header{
+    font-size: 2xl;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.space{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+}
+.cont{
+    display: flex;
+    flex-direction: column;
+    grid-column: span 2;
+}
+.child {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+.baby{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.indi{
+    font-size: small;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+.area{
+    width: 30%;
+    height: 2rem;
+    background: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 0.5rem;
+    outline: 1px solid transparent;
+    outline-offset: 1px;
+    outline-color: black;
+}
+.encodebutton{
+    border-radius: 7px;
+    width: 5rem;
+    padding: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    color: green;
+    background-color: black;
+}
+.decodebutton{
+    border-radius: 7px;
+    width: 5rem;
+    padding: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    color: red;
+    background-color: black;
+}

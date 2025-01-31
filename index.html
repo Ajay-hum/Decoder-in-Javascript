@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encoder & Decoder</title>
+</head>
+<body>
+    <div class="start">
+        <h1 class="header">ENCODER AND DECODER</h1>
+        <form class="space" onsubmit="return false;">
+            <div class="cont">
+                <label for="message" class="indi">Message:</label>
+                <div class="child">
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="5"
+                        placeholder="Enter your message"
+                        class="area"
+                        required
+                    ></textarea>
+                    <div class="baby">
+                        <button type="button" class="encodebutton" onclick="processMessage('encode')">Encode</button>
+                        <button type="button" class="decodebutton" onclick="processMessage('decode')">Decode</button>
+                    </div>
+                </div>
+                <label for="result" class="indi" style="margin-top: 2rem">Output:</label>
+                <output id="result" class="area"></output>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        const alphabet = "abcdefghijklmnopqrstuvwxyz";
+
+        // Function to reverse the character based on the alphabet
+        function reverseCharacter(char) {
+            const index = alphabet.indexOf(char.toLowerCase());
+            if (index === -1) return char; // If not in the alphabet, return as is
+            const reversedChar = alphabet[25 - index];
+            return char === char.toUpperCase() ? reversedChar.toUpperCase() : reversedChar;
+        }
+
+        // Function to encode/decode message
+        function processMessage(action) {
+            const inputText = document.getElementById("message").value;
+            let outputText = "";
+            for (const char of inputText) {
+                outputText += reverseCharacter(char); // Encoding and decoding use the same function
+            }
+            document.getElementById("result").textContent = outputText;
+        }
+    </script>
+</body>
+</html>
